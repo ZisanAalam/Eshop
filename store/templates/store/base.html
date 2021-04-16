@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        {% block title %}Base{% endblock title %}
+    </title>
+    <link rel="stylesheet" href="{% static 'store/css/all.min.css' %}">
+    <link rel="stylesheet" href="{% static 'store/css/bootstrap.min.css' %}">
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia&effect=neon|outline|emboss|shadow-multiple">
+    
+    {% block mycss %}{% endblock mycss %}
+    
+    
+</head>
+</head>
+<body>
+
+    {% include 'store/navbar.html' %}
+
+
+ 
+    {% block content %}
+    {% endblock content %}
+
+
+
+
+
+    <script src="{% static 'store/js/jQuery.js' %}"></script> 
+    <script src="{% static 'store/js/popper.js' %}"></script>  
+    <script src="{% static 'store/js/all.min.js' %}"></script> 
+    <script src="{% static 'store/js/bootstrap.min.js' %}"></script> 
+
+</body>
+</html>
